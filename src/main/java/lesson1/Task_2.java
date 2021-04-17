@@ -14,5 +14,4 @@ public class Task_2 {
         System.out.println(application.compareAreaAndPerimeter(6, 5));
         System.out.println(application.compareAreaAndPerimeter(6, 3));
     }
-    // git
 }
