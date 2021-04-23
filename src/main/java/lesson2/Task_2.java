@@ -47,7 +47,7 @@ public class Task_2 {
     private int[][] fillChessArray(int[][] chessBoard) {
         for (int i = 0; i < chessBoard.length; i++) {
             for (int j = 0; j < chessBoard[i].length; j++) {
-                chessBoard[i][j] = ((i + j) % 2 == 0 ? 0 : 1);
+                chessBoard[i][j] = ((i + j) % 2);
             }
         }
         return chessBoard;
