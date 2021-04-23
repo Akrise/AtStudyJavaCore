@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6bb7fdbc-693e-468e-99bf-7c5070c0b827" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson2/Task_7.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson2/Task_5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson2/Task_5.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson2/Task_6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson2/Task_6.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -60,11 +59,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/lesson2/Task_6.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="68" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
+            <state relative-caret-position="442">
+              <caret line="26" column="50" lean-forward="true" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/lesson2/Task_7.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -122,6 +130,7 @@
         <option value="$PROJECT_DIR$/src/main/java/lesson2/Task_4.java" />
         <option value="$PROJECT_DIR$/src/main/java/lesson2/Task_5.java" />
         <option value="$PROJECT_DIR$/src/main/java/lesson2/Task_6.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lesson2/Task_7.java" />
       </list>
     </option>
   </component>
@@ -133,8 +142,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="657" />
-    <option name="y" value="-8" />
+    <option name="x" value="533" />
+    <option name="y" value="274" />
     <option name="width" value="971" />
     <option name="height" value="517" />
   </component>
@@ -215,20 +224,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Task_6">
-    <configuration name="Task_3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lesson2.Task_3" />
-      <module name="AtStudyJavaCore" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="lesson2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Task_7">
     <configuration name="Task_4 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lesson2.Task_4" />
       <module name="AtStudyJavaCore" />
@@ -281,13 +277,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Task_7" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lesson2.Task_7" />
+      <module name="AtStudyJavaCore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lesson2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Task_7" />
         <item itemvalue="Application.Task_6" />
         <item itemvalue="Application.Task_5" />
         <item itemvalue="Application.Task_4 (1)" />
         <item itemvalue="Application.Task_4" />
-        <item itemvalue="Application.Task_3" />
       </list>
     </recent_temporary>
   </component>
@@ -358,14 +367,28 @@
       <option name="project" value="LOCAL" />
       <updated>1619207284491</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Выполнено задание 6 урока 2">
+      <created>1619208848196</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1619208848196</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Исправлены орфографические ошибки">
+      <created>1619208978918</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1619208978918</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13059701" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13059701" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -374,7 +397,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49392098" visible="true" weight="0.28710726" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49392098" visible="true" weight="0.28710726" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -428,7 +451,9 @@
     <MESSAGE value="Выполнено задание 3 урока 2" />
     <MESSAGE value="Выполнено задание 4 урока 2" />
     <MESSAGE value="Выполнено задание 5 урока 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Выполнено задание 5 урока 2" />
+    <MESSAGE value="Выполнено задание 6 урока 2" />
+    <MESSAGE value="Исправлены орфографические ошибки" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлены орфографические ошибки" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
@@ -544,8 +569,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/lesson2/Task_6.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="68" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
+        <state relative-caret-position="442">
+          <caret line="26" column="50" lean-forward="true" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lesson2/Task_7.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
         </state>
       </provider>
     </entry>
