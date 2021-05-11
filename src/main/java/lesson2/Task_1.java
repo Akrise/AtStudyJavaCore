@@ -17,13 +17,12 @@ public class Task_1 {
     }
 
     private static void showWithForeach(String[] inputStringArray) {
+        String buffer = "";
         for (String word : inputStringArray) {
-            System.out.print(word);
-            if (!"недели".equals(word)) {
-                System.out.print(' ');
-            }
+            buffer += word + " ";
         }
-        System.out.println('.');
+        buffer = buffer.trim() + '.';
+        System.out.println(buffer);
     }
 
     private static void showWithFor(String[] inputStringArray) {

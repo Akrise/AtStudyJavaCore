@@ -6,12 +6,17 @@ public class Task_4 {
     public static void main(String[] args) {
         String[][] testCases = {{"hello", "world"}, {"ping", "pong"}, {"qwer", "asdf"}, {"post", "get"}};
         for (String[] inputPair : testCases) {
-            System.out.println(stringInteractions(inputPair));
+            System.out.println(stringIntersections(inputPair));
 
         }
     }
 
-    private static String stringInteractions(String[] inputPair) {
+    /**
+     * @param inputPair -  метод принимает пару строк
+     * @return Возвращается строка, состоящая из символов, имеющихся в первой и второй входящих строках, отсортированных в алфавитном порядке.
+     */
+
+    private static String stringIntersections(String[] inputPair) {
         char[] charOutput = new char[26];
         int j = 0;
         for (int i = 0; i < inputPair[1].length(); i++) {

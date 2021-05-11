@@ -1,5 +1,7 @@
 package lesson2;
 
+import matrix.MatrixActions;
+
 public class Task_5 {
     public static void main(String[] args) {
         int dimenshionM = 3 + (int) (Math.random() * 5);
@@ -15,18 +17,8 @@ public class Task_5 {
 
         }
         System.out.println("Исходная матрица:");
-        showMatrix(inputMatrix);
+        MatrixActions.showMatrix(inputMatrix);
         System.out.println("Транспонированная матрица:");
-        showMatrix(outputMatrix);
+        MatrixActions.showMatrix(outputMatrix);
     }
-
-    public static void showMatrix(int[][] inputMatrix) {
-        for (int i = 0; i < inputMatrix.length; i++) {
-            for (int j = 0; j < inputMatrix[i].length; j++) {
-                System.out.printf("%3d ", inputMatrix[i][j]);
-            }
-            System.out.println();
-        }
-    }
-
 }

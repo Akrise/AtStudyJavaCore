@@ -1,5 +1,7 @@
 package lesson2;
 
+import matrix.MatrixActions;
+
 public class Task_6 {
     public static void main(String[] args) {
         Task_5 task4 = new Task_5();
@@ -19,7 +21,7 @@ public class Task_6 {
         int inverterTwoNPosition = 1 + (int) (Math.random() * (dimensionN - 2));
         inputMatrix[inverterTwoMPosition][inverterTwoNPosition] = 2;
         System.out.println("Initial array:");
-        Task_5.showMatrix(inputMatrix);
+        MatrixActions.showMatrix(inputMatrix);
         for (int i = inverterTwoNPosition + 1; i < dimensionN; i++) {
             outputMatrix[inverterTwoMPosition][i] = inputMatrix[inverterTwoMPosition][i] == 0 ? 1 : 0;
         }
@@ -29,7 +31,7 @@ public class Task_6 {
             }
         }
         System.out.println("Partially inverted array:");
-        Task_5.showMatrix(inputMatrix);
+        MatrixActions.showMatrix(inputMatrix);
 
     }
 }
