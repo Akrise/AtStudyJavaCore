@@ -2,9 +2,9 @@ package lesson1;
 
 public class Task_2 {
     boolean compareAreaAndPerimeter(int width, int height) {
-        int Area = width * height;
-        int Perimeter = 2 * (width + height);
-        return Area > Perimeter;
+        int area = width * height;
+        int perimeter = 2 * (width + height);
+        return area > perimeter;
     }
 
     public static void main(String[] args) {
