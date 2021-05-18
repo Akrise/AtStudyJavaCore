@@ -1,6 +1,6 @@
-package lesson2;
+package homework_solution.lesson2;
 
-import matrix.MatrixActions;
+import homework_solution.lesson2.matrix.MatrixActions;
 
 public class Task_6 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package lesson1;
+package homework_solution.lesson1;
 
 public class Task_3 {
     boolean isOdd(int number) {

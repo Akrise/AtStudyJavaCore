@@ -1,8 +1,9 @@
-package lesson2;
+package homework_solution.lesson2;
 
-import matrix.MatrixActions;
+import homework_solution.lesson2.matrix.MatrixActions;
 
 public class Task_5 {
+
     public static void main(String[] args) {
         int dimenshionM = 3 + (int) (Math.random() * 5);
         int dimenshionN = 3 + (int) (Math.random() * 5);

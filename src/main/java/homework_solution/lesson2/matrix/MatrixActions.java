@@ -1,4 +1,4 @@
-package matrix;
+package homework_solution.lesson2.matrix;
 
 public class MatrixActions {
     public static void showMatrix(int[][] inputMatrix) {

@@ -1,4 +1,4 @@
-package lesson1;
+package homework_solution.lesson1;
 
 public class Task_5 {
     boolean invertedResultOfOr(boolean arg1, boolean arg2) {
