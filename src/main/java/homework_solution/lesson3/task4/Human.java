@@ -1,5 +1,7 @@
 package homework_solution.lesson3.task4;
 
+import java.util.Arrays;
+
 public class Human {
     String name;
     Human[] friends;
@@ -8,28 +10,23 @@ public class Human {
         this.name = name;
     }
 
-    public void becomeFriends(Human Newfriend) {
+    public void becomeFriends(Human newFriend) {
         //Если друг первый, отдельный кейс
         if (friends == null) {
             friends = new Human[1];
-            friends[0] = Newfriend;
-            Newfriend.becomeFriends(this);
+            friends[0] = newFriend;
+            newFriend.becomeFriends(this);
         }
         //Проверяем, не добавлен ли уже такой друг, чтобы не попасть в бесконечный рекурсивный вызов
         for (Human friend : friends
         ) {
-            if (friend == Newfriend) return;
+            if (friend == newFriend) return;
         }
-        Human[] bufferFriends = friends;
-        int friendsNumber = friends.length;
-        //увеличиваем размер массива
-        friends = new Human[friendsNumber + 1];
-        //копируем старых друзей в новый массив
-        System.arraycopy(bufferFriends, 0, friends, 0, bufferFriends.length);
-        //добавляем нового друга
-        friends[friendsNumber] = Newfriend;
+        // увеличиваем размер массива friends
+        friends = Arrays.copyOf(friends, friends.length + 1);
+        friends[friends.length - 1] = newFriend;
         //рекурсивно вызываем метод для взаимного добавления
-        Newfriend.becomeFriends(this);
+        newFriend.becomeFriends(this);
     }
 
 }

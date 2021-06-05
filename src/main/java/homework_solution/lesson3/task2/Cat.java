@@ -11,7 +11,7 @@ public class Cat implements Comparable<Cat> {
         this.name = name;
     }
 
-    void ShowData() {
+    void printData() {
         System.out.printf("Имя: %s, Возраст: %d, Вес: %d%n", name, age, weight);
     }
 

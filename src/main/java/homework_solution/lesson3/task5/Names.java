@@ -3,22 +3,20 @@ package homework_solution.lesson3.task5;
 import java.util.Random;
 
 public class Names {
-    static String[] catNames = {"Мурзик", "Барсик", "Марсик", "Гарфилд", "Пушок", "Царапка"};
-    static String[] dogNames = {"Барон", "Альма", "Центурион", "Гром", "Цезарь", "Дакота", "Рекс"};
-    static String[] peopleNames = {"Марк", "Августина", "Елизавета", "София", "Виктор"};
+    private static final String[] CAT_NAMES = {"Мурзик", "Барсик", "Марсик", "Гарфилд", "Пушок", "Царапка"};
+    private static final String[] DOG_NAMES = {"Барон", "Альма", "Центурион", "Гром", "Цезарь", "Дакота", "Рекс"};
+    private static final String[] PEOPLE_NAMES = {"Марк", "Августина", "Елизавета", "София", "Виктор"};
+    private static Random random = new Random();
 
     public static String getCatName() {
-        Random random = new Random();
-        return catNames[random.nextInt(catNames.length)];
+        return CAT_NAMES[random.nextInt(CAT_NAMES.length)];
     }
 
     public static String getDogName() {
-        Random random = new Random();
-        return dogNames[random.nextInt(dogNames.length)];
+        return DOG_NAMES[random.nextInt(DOG_NAMES.length)];
     }
 
     public static String getHumanName() {
-        Random random = new Random();
-        return peopleNames[random.nextInt(peopleNames.length)];
+        return PEOPLE_NAMES[random.nextInt(PEOPLE_NAMES.length)];
     }
 }

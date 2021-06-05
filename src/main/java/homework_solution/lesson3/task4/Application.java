@@ -2,27 +2,27 @@ package homework_solution.lesson3.task4;
 
 public class Application {
     public static void main(String[] args) {
-        Human Mihail = new Human("Mihail");
-        Human Aleksandr = new Human("Aleksandr");
-        Human Egor = new Human("Egor");
-        Human Sergey = new Human("Sergey");
-        Human Valery = new Human("Valery");
-        Human Stanislav = new Human("Stanislav");
-        Human Grigory = new Human("Grigory");
+        Human mihail = new Human("Mihail");
+        Human aleksandr = new Human("Aleksandr");
+        Human egor = new Human("Egor");
+        Human sergey = new Human("Sergey");
+        Human valery = new Human("Valery");
+        Human stanislav = new Human("Stanislav");
+        Human grigory = new Human("Grigory");
         //Создаем дружеские связи
-        Mihail.becomeFriends(Aleksandr);
-        Mihail.becomeFriends(Stanislav);
-        Aleksandr.becomeFriends(Egor);
-        Aleksandr.becomeFriends(Grigory);
-        Egor.becomeFriends(Grigory);
-        Grigory.becomeFriends(Sergey);
-        Sergey.becomeFriends(Valery);
-        Valery.becomeFriends(Stanislav);
+        mihail.becomeFriends(aleksandr);
+        mihail.becomeFriends(stanislav);
+        aleksandr.becomeFriends(egor);
+        aleksandr.becomeFriends(grigory);
+        egor.becomeFriends(grigory);
+        grigory.becomeFriends(sergey);
+        sergey.becomeFriends(valery);
+        valery.becomeFriends(stanislav);
         //Выполняем проверку
-        System.out.println("Сергей и Григорий " + areFriends(Sergey, Grigory));
-        System.out.println("Сергей и Александр " + areFriends(Sergey, Aleksandr));
-        System.out.println("Станислав и Михаил " + areFriends(Stanislav, Mihail));
-        System.out.println("Михаил и Валерий " + areFriends(Mihail, Valery));
+        System.out.println("Сергей и Григорий " + areFriends(sergey, grigory));
+        System.out.println("Сергей и Александр " + areFriends(sergey, aleksandr));
+        System.out.println("Станислав и Михаил " + areFriends(stanislav, mihail));
+        System.out.println("Михаил и Валерий " + areFriends(mihail, valery));
     }
 
     public static boolean areFriends(Human firstHuman, Human secondHuman) {

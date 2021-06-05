@@ -13,7 +13,10 @@ public class Application {
         Human[] grandParentsOfElena = {daughterElena.getFather().getFather(), daughterElena.getFather().getMother(), daughterElena.getMother().getFather(), daughterElena.getMother().getMother()};
 
         for (Human ancestor : grandParentsOfElena) {
-            if (ancestor != null) ancestor.speak();
+            if (ancestor != null) {
+                ancestor.speak();
+            }
         }
     }
 }
+
