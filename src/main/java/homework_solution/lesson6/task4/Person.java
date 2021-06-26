@@ -13,7 +13,7 @@ public class Person {
 
     public static Person random() {
         NameGenerator nameGenerator = new NameGenerator();
-        return new Person(nameGenerator.generate(), nameGenerator.generate(), new IdentityDocument().random());
+        return new Person(nameGenerator.generate(), nameGenerator.generate(), IdentityDocument.random());
     }
 
     public void print() {
