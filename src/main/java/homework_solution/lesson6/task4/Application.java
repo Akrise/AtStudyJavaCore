@@ -7,10 +7,9 @@ public class Application {
     public static void main(String[] args) {
         List<Person> personList = new ArrayList<>();
 
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 500; i++) {
             Person person = new Person();
             personList.add(person.random());
-            person.print();
         }
         IdentityDocumentType.printStatistic();
         for (int i = 0; i < personList.size(); i++) {

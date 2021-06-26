@@ -31,7 +31,7 @@ public class IdentityDocumentType {
     }
 
     public static void printStatistic() {
-        for (int i = 0; i < countByType.length; i++) {
+        for (int i = countByType.length - 1; i >= 0; i--) {
             System.out.printf("%s(%s): %d\n", title[i], code[i], countByType[i]);
         }
     }
