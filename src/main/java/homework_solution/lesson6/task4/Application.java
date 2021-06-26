@@ -8,8 +8,7 @@ public class Application {
         List<Person> personList = new ArrayList<>();
 
         for (int i = 0; i < 500; i++) {
-            Person person = new Person();
-            personList.add(person.random());
+            personList.add(Person.random());
         }
         IdentityDocumentType.printStatistic();
         for (int i = 0; i < personList.size(); i++) {

@@ -5,12 +5,15 @@ public class Person {
     private String name;
     private IdentityDocument document;
 
-    public Person random() {
+    private Person(String surname, String name, IdentityDocument document) {
+        this.surname = surname;
+        this.name = name;
+        this.document = document;
+    }
+
+    public static Person random() {
         NameGenerator nameGenerator = new NameGenerator();
-        this.surname = nameGenerator.generate();
-        this.name = nameGenerator.generate();
-        this.document = new IdentityDocument().random();
-        return this;
+        return new Person(nameGenerator.generate(), nameGenerator.generate(), new IdentityDocument().random());
     }
 
     public void print() {
