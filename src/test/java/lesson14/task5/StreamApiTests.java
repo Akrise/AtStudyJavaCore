@@ -19,13 +19,14 @@ public class StreamApiTests {
     public void lessThenTwoPointOneMillionsSavings() throws FileNotFoundException {
         List<Person> persons = JsonHelper.getPersonsFromFile("src\\main\\java\\homework_solution\\lesson14\\dataset.json");
         Map<Person, Double> savings = persons.stream().
-                filter(x -> x.getAccounts().size()!=0).
-                collect(Collectors.toMap(x -> x, x-> x.getAccounts().stream().
+                filter(x -> x.getAccounts().size() != 0).
+                collect(Collectors.toMap(x -> x, x -> x.getAccounts().stream().
                         map(Account::getAccountBalance).
                         reduce(Double::sum).
                         get()));
-        savings.forEach((key, value)-> {
-            if(value < 2_100_000) System.out.printf("%s %s %s: %.2f\n", key.getLastName(), key.getFirstName(), key.getPatronymic(), value);
+        savings.forEach((key, value) -> {
+            if (value < 2_100_000)
+                System.out.printf("%s %s %s: %.2f\n", key.getLastName(), key.getFirstName(), key.getPatronymic(), value);
         });
     }
 
@@ -35,16 +36,16 @@ public class StreamApiTests {
         List<Person> persons = JsonHelper.getPersonsFromFile("src\\main\\java\\homework_solution\\lesson14\\dataset.json");
 
         Map.Entry<Person, Double> maxResidential = persons.stream().
-                filter(x -> x.getAccounts().size()!=0).
-                collect(Collectors.toMap(x -> x, x-> x.getProperties().stream().
+                filter(x -> x.getAccounts().size() != 0).
+                collect(Collectors.toMap(x -> x, x -> x.getProperties().stream().
                         filter(y -> y.getType().equals("Жилая")).
                         map(Properties::getPrice).
                         reduce(Double::sum).
                         orElse(0.0))).
                 entrySet().
                 stream().
-               max(Comparator.comparing(Map.Entry::getValue)).
+                max(Comparator.comparing(Map.Entry::getValue)).
                 get();
-        System.out.printf("%s %s %s: %.2f", maxResidential.getKey().getLastName(),  maxResidential.getKey().getFirstName(),  maxResidential.getKey().getPatronymic(), maxResidential.getValue());
+        System.out.printf("%s %s %s: %.2f", maxResidential.getKey().getLastName(), maxResidential.getKey().getFirstName(), maxResidential.getKey().getPatronymic(), maxResidential.getValue());
     }
 }

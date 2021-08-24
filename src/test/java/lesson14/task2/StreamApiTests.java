@@ -33,6 +33,4 @@ public class StreamApiTests {
                 sorted((x, y) -> y.getPassport().getNumber().compareTo(x.getPassport().getNumber())).
                 forEach(x -> System.out.printf("%s %s %s %s %s\n", x.getLastName(), x.getFirstName(), x.getPatronymic(), x.getPassport().getSeries(), x.getPassport().getNumber()));
     }
-
-
 }

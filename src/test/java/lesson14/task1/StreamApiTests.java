@@ -40,6 +40,4 @@ public class StreamApiTests {
                 limit(5).
                 forEach(x -> System.out.printf("%s %s %s\n", x.getLastName(), x.getFirstName(), x.getPatronymic()));
     }
-
-
 }

@@ -80,7 +80,7 @@ public class StreamApiTests {
                             allInactive = false;
                         }
                     }
-                    return !(allActive|allInactive);
+                    return !(allActive | allInactive);
                 }).
                 count();
         System.out.println(peopleCardsAmount);
@@ -94,7 +94,7 @@ public class StreamApiTests {
         LocalDate today = LocalDate.now();
         LocalDate validThru;
         try {
-            validThru = LocalDate.parse("01." + String.format("%02d",Integer.parseInt(card.getEndDateMonth())) + ".20" + card.getEndDateYear(), DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+            validThru = LocalDate.parse("01." + String.format("%02d", Integer.parseInt(card.getEndDateMonth())) + ".20" + card.getEndDateYear(), DateTimeFormatter.ofPattern("dd.MM.yyyy"));
         } catch (DateTimeParseException e) {
             throw new RuntimeException();
         }

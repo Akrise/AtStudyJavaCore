@@ -46,13 +46,13 @@ public class StreamApiTests {
     public void validateAllPassportsTest() throws FileNotFoundException {
         List<Person> persons = JsonHelper.getPersonsFromFile("src\\main\\java\\homework_solution\\lesson14\\dataset.json");
         boolean checkSeries = persons.stream().
-                filter(x -> x.getPassport()!=null).
+                filter(x -> x.getPassport() != null).
                 allMatch(x -> x.getPassport().getSeries().matches("[0-9]{4}"));
         boolean checkNumber = persons.stream().
-                filter(x -> x.getPassport()!=null).
+                filter(x -> x.getPassport() != null).
                 allMatch(x -> x.getPassport().getNumber().matches("[0-9]{6}"));
         String answer = (checkNumber && checkSeries) ? "У всех клиентов, у которых есть паспорт, данные соответствуют формату" :
-        "Есть клиенты, у которых данные паспорта не соответствуют формату";
+                "Есть клиенты, у которых данные паспорта не соответствуют формату";
         System.out.println(answer);
     }
 }
