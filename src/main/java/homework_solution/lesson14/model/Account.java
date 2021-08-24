@@ -1,5 +1,7 @@
 package homework_solution.lesson14.model;
 
+import java.util.Objects;
+
 public class Account {
     private String accountType;
     private String accountNumber;
@@ -12,6 +14,21 @@ public class Account {
         this.accountType = accountType;
         this.accountNumber = accountNumber;
         this.accountBalance = accountBalance;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Account account = (Account) o;
+        return Double.compare(account.accountBalance, accountBalance) == 0 &&
+                Objects.equals(accountType, account.accountType) &&
+                Objects.equals(accountNumber, account.accountNumber);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(accountType, accountNumber, accountBalance);
     }
 
     public String getAccountType() {

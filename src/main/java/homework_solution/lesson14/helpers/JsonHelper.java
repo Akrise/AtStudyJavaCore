@@ -6,7 +6,6 @@ import homework_solution.lesson14.model.Person;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -19,8 +18,6 @@ public class JsonHelper {
         while(scanner.hasNextLine()){
             fileAsStrings.append(scanner.nextLine());
         }
-        List<Person> persons = new ArrayList<>();
-        persons = new Gson().fromJson(fileAsStrings.toString(), new TypeToken<List<Person>>(){}.getType());
-        return persons;
+        return new Gson().fromJson(fileAsStrings.toString(), new TypeToken<List<Person>>(){}.getType());
     }
 }
