@@ -19,12 +19,11 @@ public class StreamApiTests {
     @Test
     public void passportThreeAccountsNoCardsTest() throws FileNotFoundException {
         List<Person> persons = JsonHelper.getPersonsFromFile("src\\main\\java\\homework_solution\\lesson14\\dataset.json");
-        List<Person> filteredPersons = persons.stream().
-                filter(x -> x.getPassport() != null).
-                filter(x -> x.getAccounts().size() == 3).
-                filter(x -> x.getCards().size() == 0).
-                collect(Collectors.toList());
-        Assertions.assertTrue(filteredPersons.isEmpty());
+        List<Person> filteredPersons = persons.stream()
+                .filter(x -> x.getPassport() != null)
+                .filter(x -> x.getAccounts().size() == 3)
+                .filter(x -> x.getCards().size() == 0)
+                .collect(Collectors.toList());
         boolean allSeriesValid = filteredPersons.stream().
                 allMatch(x -> x.getPassport().getSeries().matches("[0-9]{4}"));
         boolean oneElementValid = filteredPersons.stream().
@@ -32,18 +31,19 @@ public class StreamApiTests {
         boolean noElement = filteredPersons.stream().
                 noneMatch(x -> x.getPassport().getSeries().matches("[0-9]{4}"));
         System.out.printf("%b \n%b \n%b", allSeriesValid, oneElementValid, noElement);
+        Assertions.assertEquals(0, filteredPersons.size());
     }
 
     //Задание 2
     @Test
     public void countActiveAndInactiveCards() throws FileNotFoundException {
         List<Person> persons = JsonHelper.getPersonsFromFile("src\\main\\java\\homework_solution\\lesson14\\dataset.json");
-        long peopleCardsAmount = persons.stream().
-                filter(x -> x.getCards().size() != 0).
-                count();
-        long peopleAllCardsValid = persons.stream().
-                filter(x -> x.getCards().size() != 0).
-                filter(x -> {
+        long peopleCardsAmount = persons.stream()
+                .filter(x -> x.getCards().size() != 0)
+                .count();
+        long peopleAllCardsValid = persons.stream()
+                .filter(x -> x.getCards().size() != 0)
+                .filter(x -> {
                     boolean result = true;
                     for (Card card : x.getCards()) {
                         if (isCardActive(card)) {
@@ -53,9 +53,9 @@ public class StreamApiTests {
                     return result;
                 }).
                 count();
-        long peopleAllCardsInactive = persons.stream().
-                filter(x -> x.getCards().size() != 0).
-                filter(x -> {
+        long peopleAllCardsInactive = persons.stream()
+                .filter(x -> x.getCards().size() != 0)
+                .filter(x -> {
                     boolean result = true;
                     for (Card card : x.getCards()) {
                         if (!isCardActive(card)) {
@@ -65,9 +65,9 @@ public class StreamApiTests {
                     return result;
                 }).
                 count();
-        long peopleMixCardsState = persons.stream().
-                filter(x -> x.getCards().size() != 0).
-                filter(x -> {
+        long peopleMixCardsState = persons.stream()
+                .filter(x -> x.getCards().size() != 0)
+                .filter(x -> {
                     boolean allActive = true;
                     boolean allInactive = true;
                     for (Card card : x.getCards()) {

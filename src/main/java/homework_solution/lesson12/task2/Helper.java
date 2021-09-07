@@ -47,12 +47,12 @@ public class Helper {
         }
         for (int i = 1; i <= sheet.getLastRowNum(); i++) {
             int j = 0;
-            stringBuilder.append("\t<").append(sheetName.substring(0, sheetName.length() - 1)).append(">").append(System.lineSeparator());
+            stringBuilder.append("\t<").append(sheetName, 0, sheetName.length() - 1).append(">").append(System.lineSeparator());
             for (Cell cell : sheet.getRow(i)) {
                 stringBuilder.append("\t\t<").append(tags.get(j)).append(">").append(cell.getStringCellValue()).append("</").append(tags.get(j)).append(">").append(System.lineSeparator());
                 j++;
             }
-            stringBuilder.append("\t</").append(sheetName.substring(0, sheetName.length() - 1)).append(">").append(System.lineSeparator());
+            stringBuilder.append("\t</").append(sheetName, 0, sheetName.length() - 1).append(">").append(System.lineSeparator());
         }
         stringBuilder.append("</").append(sheetName).append(">").append(System.lineSeparator());
         return stringBuilder.toString();

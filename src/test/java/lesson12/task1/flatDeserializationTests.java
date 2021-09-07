@@ -7,6 +7,7 @@ import homework_solution.lesson12.task1.helpers.XmlHelper;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Scanner;
@@ -15,7 +16,7 @@ public class flatDeserializationTests {
 
     @Test
     public void deserializeFlatFromJson() throws FileNotFoundException {
-        FileReader fileReader = new FileReader("src\\test\\java\\lesson12\\task1\\files\\flat.json");
+        FileReader fileReader = new FileReader("src" + File.separator + "test" + File.separator + "java" + File.separator + "lesson12" + File.separator + "task1" + File.separator + "files" + File.separator + "flat.json");
         JsonHelper jsonHelper = new JsonHelper();
         Scanner scanner = new Scanner(fileReader);
         StringBuilder stringBuilder = new StringBuilder();
@@ -30,7 +31,7 @@ public class flatDeserializationTests {
 
     @Test
     public void deserializeFlatFromXML() throws FileNotFoundException, JsonProcessingException {
-        FileReader fileReader = new FileReader("src\\test\\java\\lesson12\\task1\\files\\flat.xml");
+        FileReader fileReader = new FileReader("src" + File.separator + "test" + File.separator + "java" + File.separator + "lesson12" + File.separator + "task1" + File.separator + "files" + File.separator + "flat.xml");
         Scanner scanner = new Scanner(fileReader);
         XmlHelper xmlHelper = new XmlHelper();
         Flat expectedFlat = new Flat().generate();
